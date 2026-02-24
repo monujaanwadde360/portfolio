@@ -28,12 +28,12 @@ function Home() {
       className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden"
     >
       {/* Premium Gradient Glow */}
-<div className="absolute inset-0 -z-10">
-  <div className="absolute top-0 left-1/2 w-[600px] h-[600px] bg-purple-600/30 blur-[120px] rounded-full -translate-x-1/2" />
-  <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-cyan-500/20 blur-[120px] rounded-full" />
-</div>
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-0 left-1/2 w-[600px] h-[600px] bg-purple-600/30 blur-[120px] rounded-full -translate-x-1/2" />
+        <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-cyan-500/20 blur-[120px] rounded-full" />
+      </div>
 
-      {/* ===== Particles Background (Correct Version) ===== */}
+      {/* ===== Particles Background ===== */}
       <Particles
         id="tsparticles"
         className="absolute inset-0"
@@ -109,21 +109,21 @@ function Home() {
 
       {/* ===== Scroll Mouse Indicator ===== */}
       {/* Scroll Down Indicator */}
-<a
-  href="#about"
-  className="
+      <a
+        href="#about"
+        className="
     absolute bottom-8 left-1/2 -translate-x-1/2
     flex flex-col items-center
     text-gray-400 hover:text-cyan-400
     transition
     group
   "
->
-  <span className="text-sm mb-2 opacity-70 group-hover:opacity-100 transition">
-    Scroll
-  </span>
+      >
+        <span className="text-sm mb-2 opacity-70 group-hover:opacity-100 transition">
+          Scroll
+        </span>
 
-  <div className="
+        <div className="
     w-10 h-10 flex items-center justify-center
     rounded-full
     border border-white/20
@@ -131,9 +131,9 @@ function Home() {
     animate-bounce
     transition
   ">
-    <FaChevronDown className="text-lg" />
-  </div>
-</a>
+          <FaChevronDown className="text-lg" />
+        </div>
+      </a>
 
     </section>
   )

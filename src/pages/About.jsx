@@ -1,7 +1,8 @@
 import { useState } from "react"
+import ParticleImage from "../components/ParticleImage"
 
 function About() {
-  const [activeTab, setActiveTab] = useState("education") // Education first
+  const [activeTab, setActiveTab] = useState("education")
 
   const experienceData = [
     {
@@ -50,7 +51,7 @@ function About() {
     <section id="about" className="bg-black text-white py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
-        {/* Premium Section Title with Lines */}
+        {/* Section Title */}
         <div className="flex items-center justify-center mb-16">
           <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-cyan-400"></div>
           <h2 className="mx-6 text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -61,15 +62,17 @@ function About() {
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
-          {/* Profile Image */}
+          {/* Particle Profile Image */}
           <div className="flex justify-center">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-3xl blur-2xl opacity-30"></div>
-              <img
-                src="/images/userimg.jpg"
-                alt="Profile"
-                className="relative rounded-3xl w-80 shadow-2xl border border-white/10"
-              />
+
+              <div className="relative w-80 h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+                <ParticleImage
+                  src="/images/userimg.jpg"
+                  className="rounded-3xl"
+                />
+              </div>
             </div>
           </div>
 
@@ -114,9 +117,7 @@ function About() {
                   className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/40 transition"
                 >
                   <p className="text-sm text-cyan-400 mb-1">{item.date}</p>
-                  <h4 className="text-lg font-semibold">
-                    {item.title}
-                  </h4>
+                  <h4 className="text-lg font-semibold">{item.title}</h4>
                   <p className="text-purple-400 text-sm mb-2">
                     {item.company}
                   </p>
